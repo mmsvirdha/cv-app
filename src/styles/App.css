@@ -1,0 +1,79 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--clr-text);
+  color: var(--clr-accent-fg);
+  padding: 0 1.5rem;
+}
+
+.app-header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.app-logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+}
+
+.app-tagline {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.app-main {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1.5rem 4rem;
+  flex: 1;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 8px 18px;
+  font-size: 14px;
+  color: var(--clr-muted);
+  cursor: pointer;
+  margin-bottom: -1px;
+  border-radius: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: var(--clr-text);
+}
+
+.tab-btn.active {
+  color: var(--clr-text);
+  border-bottom-color: var(--clr-text);
+  font-weight: 600;
+}
+
+.tab-content {
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
